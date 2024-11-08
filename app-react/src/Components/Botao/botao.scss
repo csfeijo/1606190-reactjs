@@ -1,0 +1,20 @@
+button {
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin: 2px;
+
+  &.primary {
+    background: #0096d6;
+  }
+  &.warning {
+    background: #ff9900;
+  }
+  &.danger {
+    background: #ff0000;
+  }
+  &.secondary {
+    background: green;
+  }
+}

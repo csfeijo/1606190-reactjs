@@ -1,15 +1,8 @@
 import "./botao.scss";
 
-enum Severities {
-  danger,
-  primary,
-  secondary,
-  warning,
-}
-
 interface BotaoProps {
   label: string;
-  severity: keyof typeof Severities;
+  severity: "danger" | "primary" | "secondary" | "warning";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 

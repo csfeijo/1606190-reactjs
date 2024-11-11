@@ -1,66 +1,40 @@
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import Titulo from "./Components/Titulo";
-import Placeholder from "./Components/Placeholder";
-import Botao from "./Components/Botao";
+
+interface OpcaoCursoProps {
+  item: string;
+  index: number;
+}
 
 const App = () => {
-  // destructuring
-  const [numero, setNumero] = useState(0);
-  const [nome, setNome] = useState("");
+  const [curso, setCurso] = useState("Nenhum curso selecionado");
 
-  useEffect(() => {
-    if (numero !== 0) {
-      console.log("Entrou no effect do numero");
-    }
-  }, [numero]);
+  const handlerCurso = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    setCurso(evt.target.value);
+  };
 
-  useEffect(() => {
-    if (nome !== "") {
-      console.log("Entrou no effect do nome");
-    }
-  }, [nome]);
+  const cursos = ["ReactJS", "NodeJS", "CSS & JS Pro"];
+
+  const OpcaoCurso = ({ item, index }: OpcaoCursoProps) => (
+    <React.Fragment key={index}>
+      <label>
+        <input type="radio" name="curso" value={item} onChange={handlerCurso} />
+        {item}
+      </label>
+      <br />
+    </React.Fragment>
+  );
 
   return (
     <>
-      {nome !== "" && <p>Você está logado como {nome}</p>}
-      <h1>{numero}</h1>
-      <Titulo
-        nome="ReactJS"
-        descricao={`curso introdutório ${numero}`}
-        data={new Date(2024, 11, 5)}
-      >
-        <Placeholder />
-      </Titulo>
+      <h1>Exercício</h1>
 
-      <h1>Aula 03</h1>
+      <Titulo nome={curso} />
 
-      {nome !== "" && <h4>Bem vindo, {nome}</h4>}
-
-      <Botao label="Primário" severity="primary" />
-
-      <Botao
-        label="Bota o nome"
-        severity="warning"
-        onClick={() => {
-          setNome("Cícero Feijó");
-        }}
-      />
-
-      <Botao
-        label="-1"
-        severity="danger"
-        onClick={() => {
-          setNumero(numero - 1);
-        }}
-      />
-      <Botao
-        label="+1"
-        severity="danger"
-        onClick={() => {
-          setNumero(numero + 1);
-        }}
-      />
+      {cursos.map((item, index) => {
+        return <OpcaoCurso item={item} index={index} />;
+      })}
     </>
   );
 };

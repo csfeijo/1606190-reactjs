@@ -4,7 +4,6 @@ import Titulo from "./Components/Titulo";
 
 interface OpcaoCursoProps {
   item: string;
-  index: number;
 }
 
 const App = () => {
@@ -16,24 +15,31 @@ const App = () => {
 
   const cursos = ["ReactJS", "NodeJS", "CSS & JS Pro"];
 
-  const OpcaoCurso = ({ item, index }: OpcaoCursoProps) => (
-    <React.Fragment key={index}>
+  const OpcaoCurso = ({ item }: OpcaoCursoProps) => (
+    <>
       <label>
-        <input type="radio" name="curso" value={item} onChange={handlerCurso} />
+        <input
+          type="radio"
+          name={curso}
+          value={item}
+          onChange={handlerCurso}
+          checked={curso == item}
+        />
         {item}
       </label>
       <br />
-    </React.Fragment>
+    </>
   );
 
   return (
     <>
       <h1>Exercício</h1>
-
       <Titulo nome={curso} />
 
+      <hr />
+
       {cursos.map((item, index) => {
-        return <OpcaoCurso item={item} index={index} />;
+        return <OpcaoCurso item={item} key={index} />;
       })}
     </>
   );

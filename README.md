@@ -26,6 +26,13 @@ Turma de ReactJS da Targettrust.
 - [x] useState
 - [x] useEffect
 
+## Aula 04
+
+- [x] Correção exercício slide 60
+- [x] Bugs: resolvendo bugs de state com radio button
+- [x] Refactor: criando um componente não exportado
+- [x] React StrictMode
+
 # Links uteis
 
 - [State of JS](https://stateofjs.com/en-US)
@@ -36,6 +43,8 @@ Turma de ReactJS da Targettrust.
 - [GitHub Handbook](https://www.linkedin.com/posts/awdhesh-kumar-27427424b_gitgithub-mastery-streamline-your-version-ugcPost-7259194299597086720-P3K1)
 
 - [Front End Enginner - Dicas CSS](https://www.linkedin.com/in/arbaoui-mehdi-793a96154/)
+
+https://getbem.com/
 
 # Sobre o destructuring
 

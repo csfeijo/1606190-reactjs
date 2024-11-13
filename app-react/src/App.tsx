@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.scss";
 import Titulo from "./Components/Titulo";
 import BotaoCustom from "./Components/Botao/botao.styled";
+import MenuCustom from "./Components/Menu/menu.styled";
 
 interface OpcaoCursoProps {
   item: string;
@@ -34,6 +35,7 @@ const App = () => {
 
   return (
     <>
+      <MenuCustom />
       <h1>Exercício</h1>
       <Titulo nome={curso} />
 

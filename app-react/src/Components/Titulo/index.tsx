@@ -1,3 +1,4 @@
+import { StyledTitulo, StyledFooter } from "./titulo.styled";
 interface TituloProps {
   nome: string;
 }
@@ -8,7 +9,10 @@ interface TituloProps {
 const Titulo = ({ nome }: TituloProps) => {
   return (
     <>
-      <h1>{nome}</h1>
+      <StyledTitulo>
+        <div>{nome}</div>
+      </StyledTitulo>
+      <StyledFooter>&copy; targettrust</StyledFooter>
     </>
   );
 };

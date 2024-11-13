@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Titulo from "./Components/Titulo";
+import BotaoCustom from "./Components/Botao/botao.styled";
 
 interface OpcaoCursoProps {
   item: string;
@@ -41,6 +42,8 @@ const App = () => {
       {cursos.map((item, index) => {
         return <OpcaoCurso item={item} key={index} />;
       })}
+
+      <BotaoCustom severity="danger" label="Perigosao" />
     </>
   );
 };

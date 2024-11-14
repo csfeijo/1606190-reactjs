@@ -9,7 +9,7 @@ interface TituloProps {
 const Titulo = ({ nome }: TituloProps) => {
   return (
     <>
-      <StyledTitulo>
+      <StyledTitulo className="destaque">
         <div>{nome}</div>
       </StyledTitulo>
       <StyledFooter>&copy; targettrust</StyledFooter>

@@ -33,18 +33,26 @@ Turma de ReactJS da Targettrust.
 - [x] Refactor: criando um componente não exportado
 - [x] React StrictMode
 
-# Links uteis
+## Aula 05
+
+- [x] Revisão
+- [x] Styled Components
+- [x] Estilizando uma tag
+- [x] Estilizando um componente
+- [x] Exercício de Menu
+
+# Links úteis
 
 - [State of JS](https://stateofjs.com/en-US)
 - [State of CSS](https://stateofcss.com/en-US)
-
 - [4 Maneiras de Aprimorar Seus IFS](https://www.linkedin.com/posts/isaac-gomes-matos_typescript-javascript-activity-7260263756784435200-wEwr)
-
 - [GitHub Handbook](https://www.linkedin.com/posts/awdhesh-kumar-27427424b_gitgithub-mastery-streamline-your-version-ugcPost-7259194299597086720-P3K1)
-
 - [Front End Enginner - Dicas CSS](https://www.linkedin.com/in/arbaoui-mehdi-793a96154/)
+- [BEM Pattern](https://getbem.com/)
 
-https://getbem.com/
+# Vocabulário
+
+- "wrapper": algum elemento que envolve outros (elemento pai).
 
 # Sobre o destructuring
 

@@ -41,6 +41,14 @@ Turma de ReactJS da Targettrust.
 - [x] Estilizando um componente
 - [x] Exercício de Menu
 
+## Aula 06
+
+- [x] Correção do exercício do Menu
+- [x] Overview sobre Figma
+- [x] Finalização de styled-components (props overview)
+- [x] Rotas em React
+- [x] Bate papo sobre carreira
+
 # Links úteis
 
 - [State of JS](https://stateofjs.com/en-US)
@@ -49,6 +57,7 @@ Turma de ReactJS da Targettrust.
 - [GitHub Handbook](https://www.linkedin.com/posts/awdhesh-kumar-27427424b_gitgithub-mastery-streamline-your-version-ugcPost-7259194299597086720-P3K1)
 - [Front End Enginner - Dicas CSS](https://www.linkedin.com/in/arbaoui-mehdi-793a96154/)
 - [BEM Pattern](https://getbem.com/)
+- [Roadmap - Front End developer](https://roadmap.sh/frontend)
 
 # Vocabulário
 
@@ -86,3 +95,14 @@ const [primeiro, segundo] = numeros;
 console.log(primeiro); // Saída: 10
 console.log(segundo); // Saída: 20
 ```
+
+# Sobre colaboração Open Source
+
+Itens interessantes de conhecer para conseguir colaborar com projetos Open Source.
+
+- git clone
+- git branch
+- git merge X git rebase
+- resolver conflitos de código
+- processo de PR (como abrir, como mergear, como realizar correções e diferenças)
+- processo de FORK

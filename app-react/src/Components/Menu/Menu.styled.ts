@@ -11,7 +11,7 @@ const MenuCustom = styled(Menu)`
   /* background-color: #2c3e50; Azul escuro elegante */
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px;
 
   a {
     font-family: "Roboto", sans-serif;

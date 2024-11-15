@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 interface MenuInterface {
   className?: string;
 }
@@ -5,9 +6,9 @@ interface MenuInterface {
 const Menu = ({ className }: MenuInterface) => {
   return (
     <nav className={className}>
-      <a href="#">Home</a>
-      <a href="#">Formulário</a>
-      <a href="#">Listagem</a>
+      <Link to="/">Home</Link>
+      <Link to="/formulario">Formulário</Link>
+      <Link to="/listagem">Listagem</Link>
     </nav>
   );
 };

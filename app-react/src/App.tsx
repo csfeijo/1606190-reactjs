@@ -1,52 +1,21 @@
-import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-import Titulo from "./Components/Titulo";
-import BotaoCustom from "./Components/Botao/botao.styled";
-import MenuCustom from "./Components/Menu/menu.styled";
-
-interface OpcaoCursoProps {
-  item: string;
-}
+import MenuCustom from "./Components/Menu/Menu.styled";
+import Home from "./Pages/Home";
 
 const App = () => {
-  const [curso, setCurso] = useState("Nenhum curso selecionado");
-
-  const handlerCurso = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    setCurso(evt.target.value);
-  };
-
-  const cursos = ["ReactJS", "NodeJS", "CSS & JS Pro"];
-
-  const OpcaoCurso = ({ item }: OpcaoCursoProps) => (
-    <>
-      <label>
-        <input
-          type="radio"
-          name={curso}
-          value={item}
-          onChange={handlerCurso}
-          checked={curso == item}
-        />
-        {item}
-      </label>
-      <br />
-    </>
-  );
-
   return (
-    <>
+    <BrowserRouter>
       <MenuCustom />
-      <h1>Exercício</h1>
-      <Titulo nome={curso} />
 
-      <hr />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/formulario" element={<h1>FORMULÁRIO</h1>} />
+        <Route path="/listagem" element={<h1>LISTAGEM</h1>} />
 
-      {cursos.map((item, index) => {
-        return <OpcaoCurso item={item} key={index} />;
-      })}
-
-      <BotaoCustom severity="danger" label="Perigosao" />
-    </>
+        <Route path="*" element={<h1>404 - NÃO ENCONTRADO</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import Formulario from ".";
 
-export const StyledTitulo = styled.h1`
-  color: red;
+const FormularioCustom = styled(Formulario)`
+  h1 {
+    color: red;
+  }
+
+  input {
+    border: 3px solid red;
+  }
 `;
 
-export const StyledInput = styled.input`
-  border: 2px solid orange;
-`;
+export default FormularioCustom;

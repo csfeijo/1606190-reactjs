@@ -1,15 +1,17 @@
 import BotaoCustom from "../../Components/Botao/botao.styled";
-import { StyledTitulo, StyledInput } from "./Formulario.styled";
+interface InterfaceFormulario {
+  className?: string;
+}
 
-const Formulario = () => {
+const Formulario = ({ className }: InterfaceFormulario) => {
   return (
-    <>
-      <StyledTitulo>Formulário</StyledTitulo>
+    <div className={className}>
+      <h1>Formulário</h1>
       <div>
         <label>
           NOME:
           <br />
-          <StyledInput
+          <input
             type="text"
             name="nome"
             id="nome"
@@ -23,7 +25,7 @@ const Formulario = () => {
         <label>
           IDADE:
           <br />
-          <StyledInput
+          <input
             type="number"
             name="idade"
             id="idade"
@@ -35,7 +37,7 @@ const Formulario = () => {
       </div>
 
       <BotaoCustom severity="primary" label="ENVIAR" />
-    </>
+    </div>
   );
 };
 

@@ -49,6 +49,8 @@ Turma de ReactJS da Targettrust.
 - [x] Rotas em React
 - [x] Bate papo sobre carreira
 
+## Aula 07
+
 # Links úteis
 
 - [State of JS](https://stateofjs.com/en-US)
@@ -106,3 +108,7 @@ Itens interessantes de conhecer para conseguir colaborar com projetos Open Sourc
 - resolver conflitos de código
 - processo de PR (como abrir, como mergear, como realizar correções e diferenças)
 - processo de FORK
+
+# Anotacoes
+
+SPA : Single Page Application (Aplicação de Página Única)

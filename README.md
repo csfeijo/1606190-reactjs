@@ -51,6 +51,16 @@ Turma de ReactJS da Targettrust.
 
 ## Aula 07
 
+- [x] Revisão
+- [x] Correção exercício
+- [x] Rotas com parâmetros
+
+## Aula 08
+
+- [x] Revisão
+- [x] Finalização de rotas
+- [x] Exercício de map na Listagem
+
 # Links úteis
 
 - [State of JS](https://stateofjs.com/en-US)
@@ -111,4 +121,67 @@ Itens interessantes de conhecer para conseguir colaborar com projetos Open Sourc
 
 # Anotacoes
 
-SPA : Single Page Application (Aplicação de Página Única)
+- **SPA** : Single Page Application (Aplicação de Página Única)
+
+## Exemplo de grid layout com 12 colunas - estilo Bootstrap
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    12,
+    1fr
+  ); /* Define 12 colunas de tamanho igual */
+  gap: 16px; /* Espaçamento entre os elementos */
+}
+
+[class^="col-"] {
+  grid-column: span 1;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.col-5 {
+  grid-column: span 5;
+}
+.col-6 {
+  grid-column: span 6;
+}
+.col-7 {
+  grid-column: span 7;
+}
+.col-8 {
+  grid-column: span 8;
+}
+.col-9 {
+  grid-column: span 9;
+}
+.col-10 {
+  grid-column: span 10;
+}
+.col-11 {
+  grid-column: span 11;
+}
+.col-12 {
+  grid-column: span 12;
+}
+```
+
+```html
+<div class="grid-container">
+  <div class="col-6"></div>
+  <div class="col-6"></div>
+</div>
+
+<div class="grid-container">
+  <div class="col-3"></div>
+  <div class="col-6"></div>
+  <div class="col-3"></div>
+</div>
+```

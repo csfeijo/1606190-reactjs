@@ -34,6 +34,15 @@ const ListagemCustom = styled(Listagem)`
   td {
     color: #495057; // Texto neutro
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export default ListagemCustom;

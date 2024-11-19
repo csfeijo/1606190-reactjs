@@ -36,7 +36,9 @@ const Formulario = ({ className }: InterfaceFormulario) => {
         </label>
       </div>
 
-      <BotaoCustom severity="primary" label="ENVIAR" />
+      <div>
+        <BotaoCustom severity="primary" label="ENVIAR" />
+      </div>
     </div>
   );
 };

@@ -3,18 +3,21 @@ import "./App.scss";
 import MenuCustom from "./Components/Menu/Menu.styled";
 import Home from "./Pages/Home";
 import FormularioCustom from "./Pages/Formulario/Formulario.styled";
+import ListagemCustom from "./Pages/Listagem/Listagem.styled";
 
 const App = () => {
   return (
     <BrowserRouter>
       <MenuCustom />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/formulario" element={<FormularioCustom />} />
-        <Route path="/listagem" element={<h1>LISTAGEM</h1>} />
-        <Route path="*" element={<h1>404 - NÃO ENCONTRADO</h1>} />
-      </Routes>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/formulario" element={<FormularioCustom />} />
+          <Route path="/listagem" element={<ListagemCustom />} />
+          <Route path="*" element={<h1>404 - NÃO ENCONTRADO</h1>} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 };

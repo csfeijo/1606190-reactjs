@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface ListagemInterface {
   className?: string;
 }
@@ -17,7 +19,9 @@ const Listagem = ({ className }: ListagemInterface) => {
 
         <tbody>
           <tr>
-            <td>Recursos Humanos</td>
+            <td>
+              <Link to="789">Recursos Humanos</Link>
+            </td>
             <td>RH</td>
           </tr>
           <tr>

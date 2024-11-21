@@ -63,6 +63,8 @@ Turma de ReactJS da Targettrust.
 
 # Links úteis
 
+- [GitHub Workflow - Vídeo Professor Feijó](https://www.youtube.com/watch?v=_gohCZYK50s)
+- [Widget de Stats do GitHuyb](https://github.com/anuraghazra/github-readme-stats)
 - [State of JS](https://stateofjs.com/en-US)
 - [State of CSS](https://stateofcss.com/en-US)
 - [4 Maneiras de Aprimorar Seus IFS](https://www.linkedin.com/posts/isaac-gomes-matos_typescript-javascript-activity-7260263756784435200-wEwr)

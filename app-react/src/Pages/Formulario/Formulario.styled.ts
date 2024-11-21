@@ -16,6 +16,12 @@ const FormularioCustom = styled(Formulario)`
       margin-top: 4px;
     }
   }
+
+  .mensagem {
+    background: #e07373;
+    padding: 10px;
+    border-radius: 4px;
+  }
 `;
 
 export default FormularioCustom;

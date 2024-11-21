@@ -1,9 +1,14 @@
+import { useState } from "react";
 import BotaoCustom from "../../Components/Botao/botao.styled";
 interface InterfaceFormulario {
   className?: string;
 }
 
 const Formulario = ({ className }: InterfaceFormulario) => {
+  const [nome, setNome] = useState("TT");
+  const [sigla, setSigla] = useState("");
+  const [mensagem, setMensagem] = useState("");
+
   return (
     <div className={className}>
       <h1>Formulário</h1>
@@ -16,29 +21,53 @@ const Formulario = ({ className }: InterfaceFormulario) => {
             name="nome"
             id="nome"
             maxLength={40}
-            placeholder="Seu nome"
+            placeholder="Nome"
+            value={nome}
+            onChange={(evt) => {
+              setNome(evt.target.value);
+            }}
           />
         </label>
       </div>
 
       <div>
         <label>
-          IDADE:
+          SIGLA:
           <br />
           <input
-            type="number"
-            name="idade"
-            id="idade"
-            min={14}
-            max={99}
-            placeholder="Sua idade"
+            type="text"
+            name="sigla"
+            id="sigla"
+            placeholder="Sigla"
+            value={sigla}
+            onChange={(evt) => {
+              setSigla(evt.target.value);
+            }}
           />
         </label>
       </div>
 
       <div>
-        <BotaoCustom severity="primary" label="ENVIAR" />
+        <BotaoCustom
+          severity="primary"
+          label="SALVAR"
+          onClick={() => {
+            setMensagem("");
+
+            if (nome === "") {
+              setMensagem("Preencha o nome corretamente");
+              return;
+            }
+
+            if (sigla === "") {
+              setMensagem("Preencha a sigla corretamente");
+              return;
+            }
+          }}
+        />
       </div>
+
+      {mensagem !== "" && <div className="mensagem">{mensagem}</div>}
     </div>
   );
 };

@@ -5,7 +5,7 @@ interface InterfaceFormulario {
 }
 
 const Formulario = ({ className }: InterfaceFormulario) => {
-  const [nome, setNome] = useState("TT");
+  const [nome, setNome] = useState("");
   const [sigla, setSigla] = useState("");
   const [mensagem, setMensagem] = useState("");
 

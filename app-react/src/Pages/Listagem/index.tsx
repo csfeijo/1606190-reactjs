@@ -1,30 +1,28 @@
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import BotaoCustom from "../../Components/Botao/botao.styled";
-
+import api from "../../Services/api";
 interface ListagemInterface {
   className?: string;
 }
 
 const Listagem = ({ className }: ListagemInterface) => {
+  const [items, setItems] = useState([]);
   const navigate = useNavigate();
-  // Estrutura de teste: normalmente conhecido como "mock" ou "mockup"
-  const items = [
-    {
-      id_departamento: 1,
-      nome: "Recursos Humanos",
-      sigla: "RH",
-    },
-    {
-      id_departamento: 2,
-      nome: "Financeiro",
-      sigla: "FINANC",
-    },
-    {
-      id_departamento: 3,
-      nome: "Contabilidade",
-      sigla: "CONTAB",
-    },
-  ];
+
+  useEffect(() => {
+    const listaDepartamentos = async () => {
+      try {
+        const result = await api.get("/departamentos");
+        setItems(result.data);
+      } catch (e) {
+        console.log("DEU PAU NA API");
+      }
+    };
+    if (items.length === 0) {
+      listaDepartamentos();
+    }
+  }, [items]);
 
   return (
     <>

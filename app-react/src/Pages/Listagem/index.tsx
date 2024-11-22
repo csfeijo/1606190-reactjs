@@ -6,8 +6,14 @@ interface ListagemInterface {
   className?: string;
 }
 
+type Departamento = {
+  id_departamento: number;
+  nome: string;
+  sigla: string;
+};
+
 const Listagem = ({ className }: ListagemInterface) => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Departamento[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {

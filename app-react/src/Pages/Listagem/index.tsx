@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import BotaoCustom from "../../Components/Botao/botao.styled";
 import api from "../../Services/api";
+import PrefContext from "../../Context/generalContext";
 interface ListagemInterface {
   className?: string;
 }
@@ -15,6 +16,7 @@ type Departamento = {
 const Listagem = ({ className }: ListagemInterface) => {
   const [items, setItems] = useState<Departamento[]>([]);
   const navigate = useNavigate();
+  const { tema, setTema } = useContext(PrefContext);
 
   useEffect(() => {
     const listaDepartamentos = async () => {
@@ -62,6 +64,13 @@ const Listagem = ({ className }: ListagemInterface) => {
           })}
         </tbody>
       </table>
+      <BotaoCustom
+        label="troca tema"
+        severity="danger"
+        onClick={() => {
+          setTema("dark");
+        }}
+      />
     </>
   );
 };

@@ -61,8 +61,25 @@ Turma de ReactJS da Targettrust.
 - [x] Finalização de rotas
 - [x] Exercício de map na Listagem
 
+## Aula 09
+
+- [x] Revisão
+- [x] Correção do exercício de validação de formulário
+- [x] Axios
+- [x] Integração com API
+
+## Aula 10
+
+- [x] Revisão - última aula
+- [x] Revisão sobre Axios
+- [x] Correção do exercício de POST do Formulário
+- [x] Context API
+- [x] Próximos passos
+
 # Links úteis
 
+- [React useMemo - alterativa ao useEffect](https://react.dev/reference/react/useMemo)
+- [React Context API - Professor Feijó](https://www.youtube.com/watch?v=VMy9Sb0eDHo)
 - [GitHub Workflow - Vídeo Professor Feijó](https://www.youtube.com/watch?v=_gohCZYK50s)
 - [Widget de Stats do GitHuyb](https://github.com/anuraghazra/github-readme-stats)
 - [State of JS](https://stateofjs.com/en-US)
